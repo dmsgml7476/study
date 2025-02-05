@@ -1,0 +1,102 @@
+/* h1 {
+  color: tomato;
+  font-size: 100px;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+header {
+  border: 1px solid; /* 선 */
+}
+
+/* 실렉터 띄워쓰고 실렉터는 첫번째 실렉터 안에 있는 모든 다음 실렉터를 선택한다. */
+header div {
+  display: flex; /*정렬*/
+  justify-content: space-between;
+
+  align-items: center;
+
+  /* border: 1px solid red; */
+}
+
+header ul {
+  display: flex;
+  column-gap: 10px;
+
+  list-style-type: none;
+}
+
+/* header li {
+  margin-right: 10px;
+} */
+
+/* 2개 이상의 선택자를 선택할때는 , 로 구분 */
+
+/*header button 을 myBtn으로 변경*/
+.myBtn,
+header .title {
+  border: none;
+  cursor: pointer;
+}
+
+.myBtn:hover {
+  opacity: 0.8;
+  transform: scale(1.03);
+}
+
+.myBtn:active {
+  opacity: 0.5;
+  color: tomato;
+  transform: scale(0.95);
+}
+
+/* 클래스 이름 작명시 너무 흔한 이름 ㄴㄴ */
+/* 
+header .title {
+    border: none;
+    cursor: pointer;
+} */
+
+header .title {
+  font-weight: 900;
+  font-size: 20px;
+  color: tomato;
+  background-color: transparent; /*tr = transparent 투명한 색*/
+  padding: 20px 10px;
+}
+
+body {
+  background-color: rgb(40, 40, 40);
+  color: whitesmoke;
+}
+
+/* 상속 inherit */
+
+/*.class.class 이렇게 붙여서 적으면 여러개의 클래스가 한번에 들어있는 태그를 선택*/
+
+.myBtn.login {
+  background-color: tomato;
+  color: whitesmoke;
+}
+
+/*ID는 딱 한개의 개체에만 존재하는 고유값*/
+
+/*html 의 모든 .myBtn vs header .myBtn*/
+
+header .myBtn {
+  border-radius: 4px;
+  padding: 5px 10px;
+  /*상하/좌우*/
+  /*margin, padding*/
+  /*상 우 하 좌*/
+}
+
+.myBtn.lang {
+  background-color: transparent;
+  color: whitesmoke;
+  border: 1px solid whitesmoke;
+}
